@@ -18,7 +18,7 @@ jobs:
       run: echo "RELEASE_VERSION=${GITHUB_REF#refs/tags/}" >> $GITHUB_ENV
 
     - name: Build container image
-      run: docker build -t surya-app:${{ env.RELEASE_VERSION }} .
+      run: docker build -t registry.digitalocean.com/surya-registry/surya-app:${{ env.RELEASE_VERSION }} .
 
     - name: Install doctl
       uses: digitalocean/action-doctl@v2
