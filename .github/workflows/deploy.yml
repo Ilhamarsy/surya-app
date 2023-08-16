@@ -24,7 +24,8 @@ jobs:
 
     - name: pull github repository
       run: |
-        cd ~/surya-app/
+        ll
+        cd ./surya-app/
         git pull git@github.com:Ilhamarsy/surya-app.git
           
     - name: make env file
