@@ -21,12 +21,12 @@ jobs:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
-      script: |
-        cd ./surya-app/
-        git pull git@github.com:Ilhamarsy/surya-app.git
-        touch app.env
-        echo ${{ secrets.ENV }} >> app.env
-        docker compose --env-file app.env up -d
+        script: |
+          cd ./surya-app/
+          git pull git@github.com:Ilhamarsy/surya-app.git
+          touch app.env
+          echo ${{ secrets.ENV }} >> app.env
+          docker compose --env-file app.env up -d
 
 
     # - name: pull github repository
