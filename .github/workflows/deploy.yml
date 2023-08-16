@@ -2,7 +2,7 @@ name: Deploy docker images
 
 on:
   push:    
-    branches: [ "development" ]
+    branches: [ "master" ]
     # tags:
     #   - v*
 
