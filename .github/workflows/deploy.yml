@@ -24,11 +24,11 @@ jobs:
 
     - name: pull github repository
       run: |
+        cd ~/surya-app/
         git pull git@github.com:Ilhamarsy/surya-app.git
           
     - name: make env file
       run: |
-        cd ~/surya-app/
         touch app.env
         echo ${{ secrets.ENV }} >> app.env
 
