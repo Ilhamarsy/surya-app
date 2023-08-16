@@ -4,7 +4,7 @@ services:
     image: postgres:15.3-alpine
     environment:
       - POSTGRES_USER=${DB_USER}
-      - POSTGRES_PASSWORD={DB_PASSWORD}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
       - POSTGRES_DB=surya_app
     volumes:
       - pgdata:/var/lib/postgresql/data/
