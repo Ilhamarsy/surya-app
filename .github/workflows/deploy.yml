@@ -24,8 +24,6 @@ jobs:
         script: |
           cd ./surya-app/
           git pull git@github.com:Ilhamarsy/surya-app.git
-          touch app.env
-          echo ${{ secrets.ENV }} >> app.env
           docker compose --env-file app.env up -d
 
 
